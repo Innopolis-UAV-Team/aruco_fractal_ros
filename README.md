@@ -23,19 +23,11 @@ This package depends on the following ROS packages and system libraries:
 
 ## Installation
 ### 1. Build OpenCV with contrib
+You can build OpenCV with contrib modules using the provided script `install_opencv.sh`:
 ```sh
-git clone https://github.com/opencv/opencv_contrib
-git clone https://github.com/opencv/opencv
-cd opencv
-git checkout 4.2.0
-cd ../opencv_contrib
-git checkout 4.2.0
-cd ../opencv
-mkdir build 
-cd build
-cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -DOPENCV_ENABLE_NONFREE=true ..
-make -j12
-sudo make install
+cd <path_to_your_workspace>/aruco_fractal_ros
+chmod +x install_opencv.sh
+./install_opencv.sh
 ```
 
 ### 2. Build aruco
